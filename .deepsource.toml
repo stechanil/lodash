@@ -7,7 +7,12 @@ name = "shell"
 name = "javascript"
 
   [analyzers.meta]
-  environment = ["nodejs"]
+  environment = [
+    "nodejs",
+    "browser",
+    "jest",
+    "mocha"
+  ]
 
 [[transformers]]
 name = "prettier"
