@@ -83,7 +83,7 @@ describe('partial methods', () => {
             var object = {},
                 par = func(Foo);
 
-            expect(new par() instanceof Foo)
+            expect(new par() instanceof Foo);
             expect(new par(true)).toBe(object);
         });
 

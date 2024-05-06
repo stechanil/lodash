@@ -35,7 +35,7 @@ describe('mergeWith', () => {
             actual = last(arguments);
         });
 
-        expect(isNpm ? actual.constructor.name === 'Stack' : actual instanceof mapCaches.Stack)
+        expect(isNpm ? actual.constructor.name === 'Stack' : actual instanceof mapCaches.Stack);
     });
 
     it('should overwrite primitives with source object clones', () => {

@@ -39,14 +39,14 @@ describe('bind', () => {
         let bound = bind(fn, null),
             actual = bound('a');
 
-        expect(actual[0] === null || (actual[0] && actual[0].Array))
+        expect(actual[0] === null || (actual[0] && actual[0].Array));
         expect(actual[1]).toBe('a');
 
         lodashStable.times(2, (index) => {
             bound = index ? bind(fn, undefined) : bind(fn);
             actual = bound('b');
 
-            expect(actual[0] === undefined || (actual[0] && actual[0].Array))
+            expect(actual[0] === undefined || (actual[0] && actual[0].Array));
             expect(actual[1]).toBe('b');
         });
     });
@@ -106,7 +106,7 @@ describe('bind', () => {
 
         expect(bound().a).toBe(1);
         expect(newBound.a).toBe(undefined);
-        expect(newBound instanceof Foo)
+        expect(newBound instanceof Foo);
     });
 
     it('should handle a number of arguments when called with the `new` operator', () => {
@@ -164,7 +164,7 @@ describe('bind', () => {
         var bound = bind(Foo),
             object = {};
 
-        expect(new bound() instanceof Foo)
+        expect(new bound() instanceof Foo);
         expect(new bound(true)).toBe(object);
     });
 
@@ -247,7 +247,7 @@ describe('bind', () => {
         const object = {},
             bound = _(fn).bind({}, 'a', 'b');
 
-        expect(bound instanceof _).toBeTruthy()
+        expect(bound instanceof _).toBeTruthy();
 
         const actual = bound.value()('c');
         expect(actual).toEqual([object, 'a', 'b', 'c']);

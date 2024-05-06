@@ -23,9 +23,9 @@ describe('startsWith and endsWith', () => {
             const position = isStartsWith ? 1 : 2;
 
             expect(func(string, 'b', Object(position))).toBe(true);
-            expect(
-                func(string, 'b', { toString: lodashStable.constant(String(position)) })
-            ).toBe(true);
+            expect(func(string, 'b', { toString: lodashStable.constant(String(position)) })).toBe(
+                true,
+            );
         });
 
         it('should return `true` when `target` is an empty string regardless of `position`', () => {
