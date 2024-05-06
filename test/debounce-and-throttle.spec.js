@@ -1,4 +1,4 @@
-import lodashStable, { runInContext } from "lodash";
+import lodashStable, { runInContext } from 'lodash';
 import { _, noop, push, isModularize } from './utils';
 
 describe('debounce and throttle', () => {

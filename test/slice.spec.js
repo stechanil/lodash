@@ -12,7 +12,7 @@ describe('slice', () => {
     });
 
     it('should work with a positive `start`', () => {
-        expect(slice(array, 1)).toEqual( [2, 3]);
+        expect(slice(array, 1)).toEqual([2, 3]);
         expect(slice(array, 1, 3)).toEqual([2, 3]);
     });
 

@@ -87,7 +87,7 @@ describe('merge', () => {
             actual = merge({}, source1, source2);
 
         expect(actual).toEqual(expected);
-        expect(('b' in source1.a)).toBe(false)
+        expect('b' in source1.a).toBe(false);
 
         actual = merge(source1, source2);
         expect(actual).toEqual(expected);
@@ -113,7 +113,7 @@ describe('merge', () => {
 
         expected[1] = undefined;
 
-        expect('1' in actual)
+        expect('1' in actual);
         expect(actual).toEqual(expected);
     });
 
@@ -123,19 +123,19 @@ describe('merge', () => {
             expected = { '0': 1, '1': 2, '2': 3, '3': 4 },
             actual = merge(object1, object2);
 
-        expect(('3' in args)).toBe(false)
-        expect(isArguments(actual.value)).toBe(false)
+        expect('3' in args).toBe(false);
+        expect(isArguments(actual.value)).toBe(false);
         expect(actual.value).toEqual(expected);
         object1.value = args;
 
         actual = merge(object2, object1);
-        expect(isArguments(actual.value)).toBe(false)
+        expect(isArguments(actual.value)).toBe(false);
         expect(actual.value).toEqual(expected);
 
         expected = { '0': 1, '1': 2, '2': 3 };
 
         actual = merge({}, object1);
-        expect(isArguments(actual.value)).toBe(false)
+        expect(isArguments(actual.value)).toBe(false);
         expect(actual.value).toEqual(expected);
     });
 
@@ -159,7 +159,7 @@ describe('merge', () => {
             return Ctor ? merge({ value: new Ctor(buffer) }, { value: [1] }) : false;
         });
 
-        expect(lodashStable.isArray(actual))
+        expect(lodashStable.isArray(actual));
         expect(actual).toEqual(expected);
 
         expected = lodashStable.map(typedArrays, (type, index) => {
@@ -176,7 +176,7 @@ describe('merge', () => {
             return Ctor ? merge({ value: array }, { value: new Ctor(buffer) }) : false;
         });
 
-        expect(lodashStable.isArray(actual))
+        expect(lodashStable.isArray(actual));
         expect(actual).toEqual(expected);
     });
 
@@ -212,7 +212,7 @@ describe('merge', () => {
             const buffer = Buffer.alloc([1]),
                 actual = merge({}, { value: buffer }).value;
 
-            expect(lodashStable.isBuffer(actual))
+            expect(lodashStable.isBuffer(actual));
             expect(actual[0]).toBe(buffer[0]);
             assert.notStrictEqual(actual, buffer);
         }
@@ -268,11 +268,11 @@ describe('merge', () => {
         let object = { a: 1 },
             actual = merge(new Foo(), object);
 
-        expect(actual instanceof Foo)
+        expect(actual instanceof Foo);
         expect(actual).toEqual(new Foo(object));
 
         actual = merge([new Foo()], [object]);
-        expect(actual[0] instanceof Foo)
+        expect(actual[0] instanceof Foo);
         expect(actual).toEqual([new Foo(object)]);
     });
 
@@ -313,7 +313,7 @@ describe('merge', () => {
         });
 
         merge(object, object);
-        expect(pass)
+        expect(pass);
     });
 
     it('should convert values to arrays when merging arrays of `source`', () => {
