@@ -16,7 +16,7 @@ function complexFunction() {
 
 function unusedVariable() {
   let x = 10; // This variable is unused
-  let y = person && person.name;
+  let y = person?.name;
 }
 
 function vulnerableCode(userInput: string) {
