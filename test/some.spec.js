@@ -27,7 +27,7 @@ describe('some', () => {
             some([null, true, null], (value) => {
                 count++;
                 return value;
-            })
+            }),
         );
 
         expect(count).toBe(2);

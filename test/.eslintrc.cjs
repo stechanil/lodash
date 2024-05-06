@@ -8,7 +8,7 @@ module.exports = {
         expect: 'readonly',
         it: 'readonly',
         xdescribe: 'readonly',
-        xit: 'readonly'
+        xit: 'readonly',
     },
     overrides: [
         {

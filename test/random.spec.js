@@ -56,7 +56,7 @@ describe('random', () => {
             }),
         );
 
-        expect(lodashStable.some(array, () => random(MAX_INTEGER)))
+        expect(lodashStable.some(array, () => random(MAX_INTEGER)));
     });
 
     it('should coerce arguments to finite numbers', () => {
@@ -70,19 +70,19 @@ describe('random', () => {
         const max = 1.6;
         const actual = random(min, max);
 
-        expect(actual % 1)
-        expect(actual >= min && actual <= max)
+        expect(actual % 1);
+        expect(actual >= min && actual <= max);
     });
 
     it('should support providing a `floating`', () => {
         let actual = random(true);
-        expect(actual % 1 && actual >= 0 && actual <= 1)
+        expect(actual % 1 && actual >= 0 && actual <= 1);
 
         actual = random(2, true);
-        expect(actual % 1 && actual >= 0 && actual <= 2)
+        expect(actual % 1 && actual >= 0 && actual <= 2);
 
         actual = random(2, 4, true);
-        expect(actual % 1 && actual >= 2 && actual <= 4)
+        expect(actual % 1 && actual >= 2 && actual <= 4);
     });
 
     it('should work as an iteratee for methods like `_.map`', () => {

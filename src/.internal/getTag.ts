@@ -1,4 +1,4 @@
-const toString = Object.prototype.toString
+const toString = Object.prototype.toString;
 
 /**
  * Gets the `toStringTag` of `value`.
@@ -8,10 +8,10 @@ const toString = Object.prototype.toString
  * @returns {string} Returns the `toStringTag`.
  */
 function getTag(value) {
-  if (value == null) {
-    return value === undefined ? '[object Undefined]' : '[object Null]'
-  }
-  return toString.call(value)
+    if (value == null) {
+        return value === undefined ? '[object Undefined]' : '[object Null]';
+    }
+    return toString.call(value);
 }
 
-export default getTag
+export default getTag;

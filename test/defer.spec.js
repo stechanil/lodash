@@ -9,7 +9,7 @@ describe('defer', () => {
         });
 
         setTimeout(() => {
-            expect(pass)
+            expect(pass);
             done();
         }, 32);
     });

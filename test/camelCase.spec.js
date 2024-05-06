@@ -27,7 +27,7 @@ describe('camelCase', () => {
         lodashStable.each(['IDs'], (string) => {
             expect(camelCase(string)).toBe('ids');
         });
-        
+
         lodashStable.each(['Product XMLs'], (string) => {
             expect(camelCase(string)).toBe('productXmls');
         });

@@ -8,16 +8,16 @@
  * @returns {boolean} Returns `true` if `target` is found, else `false`.
  */
 function arrayIncludesWith(array, target, comparator) {
-  if (array == null) {
-    return false
-  }
-
-  for (const value of array) {
-    if (comparator(target, value)) {
-      return true
+    if (array == null) {
+        return false;
     }
-  }
-  return false
+
+    for (const value of array) {
+        if (comparator(target, value)) {
+            return true;
+        }
+    }
+    return false;
 }
 
-export default arrayIncludesWith
+export default arrayIncludesWith;
