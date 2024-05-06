@@ -1,31 +1,31 @@
 function insecureFunction(password: string) {
-  console.log(`Password: ${password}`);
+    console.log(`Password: ${password}`);
 }
 
-let person = {
-  name: "abc"
+const person = {
+    name: 'abc',
 };
 
 function complexFunction() {
-  let sum = 0;
-  for (let i = 0; i < 10000; i++) {
-      sum += i;
-  }
-  console.log(`Sum: ${sum}`);
+    let sum = 0;
+    for (let i = 0; i < 10000; i++) {
+        sum += i;
+    }
+    console.log(`Sum: ${sum}`);
 }
 
 function unusedVariable() {
-  let x = 10; // This variable is unused
-  let y = person?.name;
+    const x = 10; // This variable is unused
+    const y = person?.name;
 }
 
 function vulnerableCode(userInput: string) {
-  eval(userInput); // This is a security vulnerability
+    eval(userInput); // This is a security vulnerability
 }
 
-const hardcodedPassword = "password123"; // This is a security vulnerability
+const password = 'password123'; // This is a security vulnerability
 
-insecureFunction(hardcodedPassword);
+insecureFunction(password);
 complexFunction();
 unusedVariable();
 vulnerableCode("alert('Hello, world!')");
