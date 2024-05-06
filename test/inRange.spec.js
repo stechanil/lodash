@@ -48,6 +48,6 @@ describe('inRange', () => {
             inRange(-1, -1, NaN),
         ];
 
-        expect(actual).toEqual(lodashStable.map(actual,stubTrue));
+        expect(actual).toEqual(lodashStable.map(actual, stubTrue));
     });
 });

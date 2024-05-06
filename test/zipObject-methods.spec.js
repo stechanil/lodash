@@ -25,8 +25,8 @@ describe('zipObject methods', () => {
                 const expected = isDeep
                     ? { a: { b: { c: 1 } } }
                     : index
-                    ? { 'a,b,c': 1 }
-                    : { 'a.b.c': 1 };
+                      ? { 'a,b,c': 1 }
+                      : { 'a.b.c': 1 };
                 expect(func([path], [1])).toEqual(expected);
             });
         });
