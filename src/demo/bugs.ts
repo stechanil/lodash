@@ -2,6 +2,10 @@ function insecureFunction(password: string) {
   console.log(`Password: ${password}`);
 }
 
+let person = {
+  name: "abc"
+};
+
 function complexFunction() {
   let sum = 0;
   for (let i = 0; i < 10000; i++) {
@@ -12,6 +16,7 @@ function complexFunction() {
 
 function unusedVariable() {
   let x = 10; // This variable is unused
+  let y = person && person.name;
 }
 
 function vulnerableCode(userInput: string) {
