@@ -16,7 +16,7 @@ function complexFunction() {
 
 function unusedVariable() {
     const x = 10; // This variable is unused
-    const y = person?.name;
+    const y = person && person.name;
 }
 
 function vulnerableCode(userInput: string) {
